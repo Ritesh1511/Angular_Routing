@@ -182,7 +182,7 @@ In Standalone Angular components, Angular does not automatically load directives
 
 
 # What is NgModule?
-## An NgModule is like a container or box that holds components and their dependencies.
+An NgModule is like a container or box that holds components and their dependencies.
 
 
 
