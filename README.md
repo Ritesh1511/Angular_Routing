@@ -193,6 +193,79 @@ In modern Angular projects created with Angular CLI (v17+ and your v21), compone
 Summary - 
 Standalone component = a component that works independently without needing an NgModule.
 
+
+
+## routerLinkActive
+routerLinkActive automatically adds a CSS class to the link when its route is active, helping indicate the current page in the navigation.
+
+Process to configure - 
+Import in app.ts file.
+
+```
+    <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+    <li><a routerLink="/about"routerLinkActive="active">About</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+```
+Now we have to create class with active name in app.css
+```
+.active{
+    color: brown;
+}
+```
+
+
+
+
+1️⃣ styles.css (Global Styles)
+
+styles.css applies to the entire Angular application.
+
+Any style written here affects all components.
+
+Example:
+
+/* styles.css */
+h1 {
+  color: red;
+}
+
+Result:
+
+Home component → red h1
+About component → red h1
+Contact component → red h1
+
+So it is global styling.
+
+Typical things placed here:
+
+global fonts
+
+reset styles
+
+body styling
+
+common utility classes
+
+2️⃣ app.css (Component Styles)
+
+app.css belongs only to AppComponent.
+
+It affects only the template of app.html.
+
+Example:
+
+/* app.css */
+h1 {
+  color: blue;
+}
+
+Result:
+
+h1 inside app.html → blue
+h1 inside home.html → NOT affected
+
+
 # AngularRouting
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
